@@ -90,7 +90,7 @@ int partition(Canvas& can, int arr[], int low_index, int high_index)
             can.drawRectangle(right, cwh - arr[j], right+width, cwh, GREEN);
             //fade
             can.drawRectangle(low_index*width+MARGIN/2, 0, (high_index+1)*width+MARGIN/2, cwh, ColorInt(0, 0, 0, 150));//
-            //busyWait();
+            busyWait();
 
             return(j);
         }
