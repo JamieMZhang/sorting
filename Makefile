@@ -1,5 +1,5 @@
 #Target to make and objects needed
-TARGET = sort
+TARGET = bubblesort
 OBJS = $(TARGET).o
 
 #Compiler, remove command, and OS we're working on
@@ -37,7 +37,10 @@ CXXFLAGS=-c -O3 -g3 \
     -I/usr/local/include/ \
     -I/opt/AMDAPP/include/ \
     ${OS_INCLUDE} \
-	-I/usr/include/freetype2/freetype  \
+	-I/usr/include/freetype2  \
+	-I/usr/include/freetype2  \
+	-I/usr/local/include/freetype2  \
+	-I/usr/local/include/freetype2/freetype \
     -std=c++0x -fopenmp \
     -Wno-unused-function #Supress warnings
 
