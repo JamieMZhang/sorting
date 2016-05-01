@@ -40,7 +40,7 @@ int partition(Canvas& can, int arr[], int low_index, int high_index)
     int right;
     //printf("%d ", omp_get_thread_num());
 
-    can.drawRectangle(left, cwh - arr[low_index], left+width, cwh, GREEN);
+    can.drawRectangle(left, cwh - arr[low_index], left+width, cwh, WHITE);
     printf("ID = %d\n", omp_get_thread_num());
     
     while(1)
@@ -87,7 +87,7 @@ int partition(Canvas& can, int arr[], int low_index, int high_index)
             arr[j]= temp;
             right = MARGIN/2 + (j)*width;
             can.drawRectangle(right, 0, right+width, cwh, BLACK);
-            can.drawRectangle(right, cwh - arr[j], right+width, cwh, GREEN);
+            can.drawRectangle(right, cwh - arr[j], right+width, cwh, WHITE);
             //fade
             can.drawRectangle(low_index*width+MARGIN/2, 0, (high_index+1)*width+MARGIN/2, cwh, ColorInt(0, 0, 0, 150));//
             busyWait();

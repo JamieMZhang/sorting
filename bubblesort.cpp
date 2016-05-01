@@ -77,8 +77,10 @@ void smartSortFunction(Canvas& can, int threads, int size) {
                 flag = false;
                 //can.pauseDrawing(); 
                 temp = numbers[offset+i*2];
+                //exchange
                 numbers[offset+i*2] = numbers[offset+i*2+1];
                 numbers[offset+i*2+1] = temp;
+
                 left = MARGIN/2 + (offset+i*2)*8;
                 can.drawRectangle(left, cwh - numbers[offset+i*2], left+8, cwh, cl);
                 can.drawRectangle(left+8, cwh - numbers[offset+i*2+1], left+16, cwh, cl);
@@ -127,6 +129,7 @@ void smartSortFunction(Canvas& can, int threads, int size) {
               }
               busyWait();
             }
+            //TODO: seperate the last ODD to critical section
             flagSum = flagSum + flag;
             printf("flagSum = %d\n", flagSum);
             #pragma omp barrier 

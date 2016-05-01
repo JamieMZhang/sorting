@@ -1,5 +1,5 @@
 #Target to make and objects needed
-TARGET = bubblesort
+TARGET = quicksort
 OBJS = $(TARGET).o
 
 #Compiler, remove command, and OS we're working on
